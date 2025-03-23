@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>User Management</h1>
+<button hx-get="/users/new" hx-target="#user-form">Add New User</button>
+<div hx-get="/users/list" hx-trigger="load" hx-target="#user-list"></div>
+<div id="user-list"></div>
+<div id="user-form"></div>
+{% endblock %}

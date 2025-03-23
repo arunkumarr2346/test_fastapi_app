@@ -1,0 +1,6 @@
+<form hx-post="/users/save" hx-target="#user-list">
+    <input type="hidden" name="id" value="{{ user.id if user else 0 }}">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="{{ user.name if user else '' }}" required>
+    <button type="submit">Save</button>
+</form>
